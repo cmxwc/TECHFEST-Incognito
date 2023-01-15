@@ -170,6 +170,7 @@ export const TRENDING: IProduct[] = [
 export const CATEGORIES: ICategory[] = [
   {id: 2, name: 'All Issues'},
   {id: 1, name: 'Add New'},
+  {id: 0, name: 'Progress'},
 ];
 
 // article options
