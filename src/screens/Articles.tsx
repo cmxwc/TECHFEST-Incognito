@@ -93,15 +93,15 @@ const Articles = () => {
                     Current Carpark
                   </Text>
                 <Text p semibold marginBottom={sizes.s}>
-                  Title
+                  Issue
                 </Text>
                 <Block>
-                  <Input placeholder="Regular" marginBottom={sizes.sm} />
+                  <Input placeholder="Issue" marginBottom={sizes.sm} />
                   <Text p semibold marginBottom={sizes.s}>
                   Description
                   </Text>
                   <Block>
-                    <Input placeholder="Regular" marginBottom={sizes.m} />
+                    <Input placeholder="Description" marginBottom={sizes.m} />
                     <Button flex={0} gradient={gradients.primary} marginBottom={sizes.base}>
                     <Text white bold transform="uppercase">
                       Submit
