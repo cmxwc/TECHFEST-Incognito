@@ -168,10 +168,8 @@ export const TRENDING: IProduct[] = [
 
 // categories
 export const CATEGORIES: ICategory[] = [
-  {id: 1, name: 'Popular'},
-  {id: 2, name: 'Newest'},
-  {id: 3, name: 'Fashion'},
-  {id: 4, name: 'Best deal'},
+  {id: 2, name: 'All Issues'},
+  {id: 1, name: 'Add New'},
 ];
 
 // article options
@@ -304,41 +302,6 @@ export const ARTICLES: IArticle[] = [
     image:
       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
     user: USERS[3],
-    timestamp: dayjs().unix(),
-  },
-  {
-    id: 5,
-    title: 'Office space means growth.',
-    description: `The mission of LinkedIn is simple: connect the world's professionals.`,
-    category: CATEGORIES[1],
-    options: ARTICLE_OPTIONS,
-    image:
-      'https://images.unsplash.com/photo-1596720426673-e4e14290f0cc?fit=crop&w=450&q=80',
-    user: USERS[4],
-    timestamp: dayjs().unix(),
-  },
-  {
-    id: 6,
-    title: 'Office space means growth.',
-    description:
-      'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
-    category: CATEGORIES[1],
-    options: ARTICLE_OPTIONS,
-    image:
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
-    user: USERS[5],
-    timestamp: dayjs().unix(),
-  },
-  {
-    id: 7,
-    title: 'Office space means growth.',
-    description:
-      'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
-    category: CATEGORIES[1],
-    options: ARTICLE_OPTIONS,
-    image:
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
-    user: USERS[6],
     timestamp: dayjs().unix(),
   },
   {
