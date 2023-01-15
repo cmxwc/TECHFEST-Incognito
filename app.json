@@ -1,20 +1,16 @@
 {
   "expo": {
-    "name": "rn-material-kit-free",
-    "description": "React Native - Material Kit Free",
-    "slug": "rn-material-kit-free",
-    "privacy": "unlisted",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.8.0",
+    "name": "rn-soft-ui-kit-free",
+    "slug": "rn-soft-ui-kit-free",
+    "description": "React Native - Soft UI Kit - Free",
+    "primaryColor": "#CB0C9F",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#6C24AA"
+      "backgroundColor": "#CB0C9F"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,6 +20,15 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#CB0C9F"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     }
   }
 }
