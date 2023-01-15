@@ -77,10 +77,10 @@ const Profile = () => {
                 source={{uri: user?.avatar}}
               />
               <Text h5 center white>
-                {user?.name}
+                John Tay
               </Text>
               <Text p center white>
-                {user?.department}
+                Maintenance Staff
               </Text>
               <Block row marginVertical={sizes.m}>
                 <Button
@@ -150,16 +150,16 @@ const Profile = () => {
               paddingVertical={sizes.sm}
               renderToHardwareTextureAndroid>
               <Block align="center">
-                <Text h5>{user?.stats?.posts}</Text>
-                <Text>{t('profile.posts')}</Text>
+                <Text h5>5</Text>
+                <Text>Issues Made</Text>
               </Block>
               <Block align="center">
-                <Text h5>{(user?.stats?.followers || 0) / 1000}k</Text>
-                <Text>{t('profile.followers')}</Text>
+                <Text h5>10</Text>
+                <Text>Issues Resolved</Text>
               </Block>
               <Block align="center">
-                <Text h5>{(user?.stats?.following || 0) / 1000}k</Text>
-                <Text>{t('profile.following')}</Text>
+                <Text h5>2nd</Text>
+                <Text>Place</Text>
               </Block>
             </Block>
           </Block>
@@ -178,7 +178,7 @@ const Profile = () => {
           <Block paddingHorizontal={sizes.sm} marginTop={sizes.s}>
             <Block row align="center" justify="space-between">
               <Text h5 semibold>
-                {t('common.album')}
+                Issues Resolved
               </Text>
               <Button>
                 <Text p primary semibold>

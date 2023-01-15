@@ -101,10 +101,25 @@ const Home = ({ navigation }) => {
 }
 
   // console.log(markers)
+  const [mapRegion, setmapRegion] = useState<any>(null);
+
+  useEffect(() => {
+    if (location) {
+      setmapRegion({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      });
+
+    }
+
+
+  }, [location]);
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map}>
+      <MapView style={styles.map} region={mapRegion}>
       {markers.map((marker : any) => (
 
         <MapView.Marker
@@ -117,6 +132,15 @@ const Home = ({ navigation }) => {
             navigation.navigate('Articles')}}
         />
       ))}
+      {location ? (
+      <MapView.Marker
+      pinColor={"red"}
+      key={1}
+      coordinate={{ latitude : location.coords.latitude, longitude : location.coords.longitude }}
+      title={"Current location"}
+    />
+      ) : null }
+
       </MapView>
       <Modal
         animationType="slide"
