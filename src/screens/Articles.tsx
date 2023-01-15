@@ -3,7 +3,9 @@ import {FlatList} from 'react-native';
 
 import {useData, useTheme} from '../hooks/';
 import {IArticle, ICategory} from '../constants/types';
-import {Block, Button, Article, Text} from '../components/';
+import {Block, Button, Article, Text, Input} from '../components/';
+
+
 
 const Articles = () => {
   const data = useData();
@@ -30,6 +32,7 @@ const Articles = () => {
     );
 
     setArticles(newArticles);
+    console.log(selected)
   }, [data, selected, setArticles]);
 
   return (
@@ -65,7 +68,8 @@ const Articles = () => {
           })}
         </Block>
       </Block>
-
+      {
+        typeof selected != "undefined" && selected && selected.name == "All Issues" ? (
       <FlatList
         data={articles}
         showsVerticalScrollIndicator={false}
@@ -73,7 +77,44 @@ const Articles = () => {
         style={{paddingHorizontal: sizes.padding}}
         contentContainerStyle={{paddingBottom: sizes.l}}
         renderItem={({item}) => <Article {...item} />}
-      />
+      /> ) : null 
+        }
+       {
+        typeof selected != "undefined" && selected && selected.name == "Add New" ? (
+          <Block
+                color={colors.card}
+                margin={sizes.m}
+                paddingTop={sizes.m}
+                paddingHorizontal={sizes.padding}>
+                  <Text p semibold marginBottom={sizes.s}>
+                    Carpark
+                  </Text>
+                  <Text p marginBottom={sizes.m}>
+                    Current Carpark
+                  </Text>
+                <Text p semibold marginBottom={sizes.s}>
+                  Title
+                </Text>
+                <Block>
+                  <Input placeholder="Regular" marginBottom={sizes.sm} />
+                  <Text p semibold marginBottom={sizes.s}>
+                  Description
+                  </Text>
+                  <Block>
+                    <Input placeholder="Regular" marginBottom={sizes.m} />
+                    <Button flex={0} gradient={gradients.primary} marginBottom={sizes.base}>
+                    <Text white bold transform="uppercase">
+                      Submit
+                    </Text>
+                  </Button>
+                  </Block>
+
+                </Block>
+
+
+              </Block>
+        ) : null 
+       }
     </Block>
   );
 };
