@@ -538,8 +538,10 @@ const Components = () => {
         <Image
           radius={0}
           resizeMode="cover"
-          width={sizes.width}
-          height={headerHeight}
+          style={{
+            width: sizes.width,
+            height: headerHeight,
+          }}
           source={assets.header}
         />
       ),
