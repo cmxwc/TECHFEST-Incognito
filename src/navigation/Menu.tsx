@@ -85,11 +85,11 @@ const DrawerContent = (
   // screen list for Drawer menu
   const screens = [
     {name: t('screens.home'), to: 'Home', icon: assets.home},
-    {name: t('screens.components'), to: 'Components', icon: assets.components},
+    // {name: t('screens.components'), to: 'Components', icon: assets.components},
     // {name: t('screens.articles'), to: 'Articles', icon: assets.document},
     // {name: t('screens.rental'), to: 'Pro', icon: assets.rental},
     {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
-    {name: t('screens.admin'), to: 'Admin', icon: assets.profile},
+    // {name: t('screens.admin'), to: 'Admin', icon: assets.profile},
     {name: t('screens.leaderboardrank'), to: 'LeaderboardRank', icon: assets.users},
     // {name: t('screens.settings'), to: 'Pro', icon: assets.settings},
     // {name: t('screens.register'), to: 'Register', icon: assets.register},
@@ -109,8 +109,8 @@ const DrawerContent = (
             radius={0}
             width={33}
             height={33}
-            color={colors.text}
-            source={assets.logo}
+            // color={colors.text}
+            source={require('../assets/images/logo.png')}
             marginRight={sizes.sm}
           />
           <Block>

@@ -1,11 +1,11 @@
 import React, {useLayoutEffect, useState} from 'react';
-import {FlatList, TouchableOpacity} from 'react-native';
+import {FlatList, TouchableOpacity, Modal} from 'react-native';
 
 import {useNavigation} from '@react-navigation/core';
 import {useHeaderHeight} from '@react-navigation/stack';
 
 import {useTheme} from '../hooks/';
-import {Block, Button, Input, Image, Switch, Modal, Text} from '../components/';
+import {Block, Button, Input, Image, Switch, Text} from '../components/';
 
 // buttons example
 const Buttons = () => {

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, View, Pressable, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
+import {FlatList, StyleSheet, View, Pressable, Modal, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 
 import {useData, useTheme} from '../hooks/';
 import {IArticle, ICategory} from '../constants/types';
-import {Block, Button, Article, Text, Input, Image, Modal} from '../components/';
+import {Block, Button, Article, Text, Input, Image} from '../components/';
 
 import Timeline from 'react-native-timeline-flatlist';
 import { Assets } from '@react-navigation/stack';
@@ -163,24 +163,6 @@ const Articles = ({ route, navigation }) => {
                       Submit
                     </Text>
                   </Button>
-                    <Modal visible={showModal} onRequestClose={() => setModal(false)}>
-                      <FlatList
-                        keyExtractor={(index) => `${index}`}
-                        data={['Paint Work', 'Rubbish', 'Electronics', 'Machinery', 'Others']}
-                        renderItem={({item}) => (
-                          <Button
-                            marginBottom={sizes.sm}
-                            onPress={() => {
-                              setQuantity(item);
-                              setModal(false);
-                            }}>
-                            <Text p white semibold transform="uppercase">
-                              {item}
-                            </Text>
-                          </Button>
-                        )}
-                      />
-                    </Modal>
                   </Block>
                 </Block>
 
@@ -238,6 +220,24 @@ const Articles = ({ route, navigation }) => {
               </Pressable>
             </View>
 
+      </Modal>
+      <Modal visible={showModal} onRequestClose={() => setModal(false)}>
+        <FlatList
+          keyExtractor={(index) => `${index}`}
+          data={['Paint Work', 'Rubbish', 'Electronics', 'Machinery', 'Others']}
+          renderItem={({item}) => (
+            <Button
+              marginBottom={sizes.sm}
+              onPress={() => {
+                setQuantity(item);
+                setModal(false);
+              }}>
+              <Text p white semibold transform="uppercase">
+                {item}
+              </Text>
+            </Button>
+          )}
+        />
       </Modal>
     </Block>
   );
