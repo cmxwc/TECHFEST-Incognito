@@ -153,7 +153,7 @@ const Home = ({ navigation }) => {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}> 
-            
+            <Text style={styles.modalTitleText}>Nearest Carpark Found</Text>
             <Text style={styles.modalText}>{carparkSelected && carparkSelected.address ? carparkSelected.address : ''}</Text>
             <Text style={styles.modalText}>{carparkSelected && carparkSelected.car_park_type ? carparkSelected.car_park_type : ''}</Text>
             <Pressable
@@ -318,6 +318,12 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
+  },
+  modalTitleText: {
+    marginBottom: 15,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
 export default Home;
