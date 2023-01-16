@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Articles, Components, Home, Profile, Register, Pro, LeaderboardRank} from '../screens';
+import {Articles, Components, Home, Profile, Register, Pro, LeaderboardRank, Admin} from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 
 const Stack = createStackNavigator();
@@ -36,6 +36,12 @@ export default () => {
         options={{title: t('navigation.leaderboardrank')}}
       />
 
+      {/* <Stack.Screen
+        name="Admin"
+        component={Admin}
+        options={{title: t('navigation.admin')}}
+      /> */}
+
       <Stack.Screen name="Pro" component={Pro} options={screenOptions.pro} />
 
       <Stack.Screen
@@ -43,6 +49,13 @@ export default () => {
         component={Profile}
         options={{headerShown: false}}
       />
+
+      <Stack.Screen
+        name="Admin"
+        component={Admin}
+        options={{headerShown: false}}
+      />
+
 
       <Stack.Screen
         name="Register"

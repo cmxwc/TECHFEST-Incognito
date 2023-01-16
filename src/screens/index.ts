@@ -8,6 +8,7 @@ export {default as Home} from './Home';
 export {default as Notifications} from './Pro';
 export {default as NotificationsSettings} from './Pro';
 export {default as Privacy} from './Pro';
+export {default as Admin} from './Admin';
 export {default as Profile} from './Profile';
 export {default as LeaderboardRank} from './LeaderboardRank';
 export {default as Register} from './Register';

@@ -8,7 +8,7 @@ import {useData, useTheme, useTranslation} from '../hooks';
 
 const isAndroid = Platform.OS === 'android';
 
-const Profile = () => {
+const Admin = () => {
   const {user} = useData();
   const {t} = useTranslation();
   const navigation = useNavigation();
@@ -80,7 +80,7 @@ const Profile = () => {
                 John Tay
               </Text>
               <Text p center white>
-                Friendly neighbourhood guy from Yishun
+                Maintenance Staff
               </Text>
               <Block row marginVertical={sizes.m}>
                 <Button
@@ -157,10 +157,10 @@ const Profile = () => {
                 <Text h5>10</Text>
                 <Text>Issues Resolved</Text>
               </Block>
-              <Block align="center">
+              {/* <Block align="center">
                 <Text h5>2nd</Text>
                 <Text>Place</Text>
-              </Block>
+              </Block> */}
             </Block>
           </Block>
 
@@ -170,7 +170,7 @@ const Profile = () => {
               {t('profile.aboutMe')}
             </Text>
             <Text p lineHeight={26}>
-            If I am not for myself, who will be for me? If I am not for others, what am I? And if not now, when?
+              {user?.about}
             </Text>
           </Block>
 
@@ -222,4 +222,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Admin;
