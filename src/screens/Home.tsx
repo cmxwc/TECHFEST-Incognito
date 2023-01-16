@@ -163,7 +163,7 @@ const Home = ({ navigation }) => {
                   carparkName: carparkSelected && carparkSelected.address ? carparkSelected.address : ''
                 })
                 setModalVisible(!modalVisible)}}>
-              <Text style={styles.textStyle}>View carpark details</Text>
+              <Text style={styles.textStyle}>View Carpark Details</Text>
             </Pressable>
             <Pressable
               style={[styles.button, styles.buttonClose]}

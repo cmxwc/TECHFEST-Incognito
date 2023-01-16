@@ -49,7 +49,7 @@
     }
   },
   "app": {
-    "name": "Carpark By All, For All",
+    "name": "LotCare",
     "fullname": "Carpark By All, For All",
     "native": "React Native",
     "link": "creative-tim.com"
@@ -89,7 +89,7 @@
     "documentation": "Documentation"
   },
   "home": {
-    "title": "Soft UI",
+    "title": "LotCare",
     "following": "Following",
     "trending": "Trending"
   },
