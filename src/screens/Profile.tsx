@@ -189,7 +189,7 @@ const Profile = () => {
             <Block row justify="space-between" wrap="wrap">
               <Image
                 resizeMode="cover"
-                source={assets?.photo1}
+                source={{ uri:"https://advanceaccess.ie/wp-content/uploads/2017/12/Automated-Car-Park-Ticket-Machines.jpg"}}
                 style={{
                   width: IMAGE_VERTICAL_SIZE + IMAGE_MARGIN / 2,
                   height: IMAGE_VERTICAL_SIZE * 2 + IMAGE_VERTICAL_MARGIN,
@@ -198,7 +198,7 @@ const Profile = () => {
               <Block marginLeft={sizes.m}>
                 <Image
                   resizeMode="cover"
-                  source={assets?.photo2}
+                  source={{ uri:"https://images.unsplash.com/photo-1613699731418-ced707228764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"}}
                   marginBottom={IMAGE_VERTICAL_MARGIN}
                   style={{
                     height: IMAGE_VERTICAL_SIZE,
@@ -207,7 +207,7 @@ const Profile = () => {
                 />
                 <Image
                   resizeMode="cover"
-                  source={assets?.photo3}
+                  source={{ uri:"https://cdn.shopify.com/s/files/1/1885/2639/articles/overflowing-green-wheelie-bins_1112x.jpg?v=1609936974"}}
                   style={{
                     height: IMAGE_VERTICAL_SIZE,
                     width: IMAGE_VERTICAL_SIZE,

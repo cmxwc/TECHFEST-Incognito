@@ -191,7 +191,7 @@ const Articles = ({ route, navigation }) => {
                 onPress={() => setModalVisible(!modalVisible)}>
                 <Text style={styles.textStyle}>Close</Text>
               </Pressable>
-              </View>
+            </View>
 
       </Modal>
     </Block>
