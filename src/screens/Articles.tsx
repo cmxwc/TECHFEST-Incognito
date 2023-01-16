@@ -102,6 +102,11 @@ const Articles = () => {
                   </Text>
                   <Block>
                     <Input placeholder="Description" marginBottom={sizes.m} />
+                    <Button flex={0} gradient={gradients.secondary} marginBottom={sizes.base}>
+                    <Text white bold transform="uppercase">
+                      Upload Image
+                    </Text>
+                  </Button>
                     <Button flex={0} gradient={gradients.primary} marginBottom={sizes.base}>
                     <Text white bold transform="uppercase">
                       Submit
