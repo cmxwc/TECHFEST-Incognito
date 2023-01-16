@@ -258,52 +258,52 @@ export const LOCATIONS: ILocation[] = [
 export const ARTICLES: IArticle[] = [
   {
     id: 1,
-    title: 'Flexible office space means growth.',
+    title: 'Pay & Display Machine Faulty',
     description:
-      'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
+      'Unable to pay when exiting the carpark. Please fix this issue soon. Thank you so much',
     category: CATEGORIES[0],
     options: ARTICLE_OPTIONS,
     image:
-      'https://images.unsplash.com/photo-1604998103924-89e012e5265a?fit=crop&w=450&q=80',
+      'https://advanceaccess.ie/wp-content/uploads/2017/12/Automated-Car-Park-Ticket-Machines.jpg',
     user: USERS[0],
     timestamp: dayjs().unix(),
   },
   {
     id: 2,
-    title: 'Global payments in a single integration.',
+    title: 'Stop Line Paint Faded',
     description:
-      'Rather than worrying about switching offices every couple years, you can instead stay.',
+      'The stop line paint at level 3 has faded. Please help to repaint it soon. Thank you!',
     category: CATEGORIES[0],
     options: ARTICLE_OPTIONS,
     image:
-      'https://images.unsplash.com/photo-1563492065599-3520f775eeed?fit=crop&w=450&q=80',
+      'https://images.unsplash.com/photo-1613699731418-ced707228764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
     user: USERS[1],
     timestamp: dayjs().unix(),
   },
   {
     id: 3,
-    title: 'Working with the latest technologies.',
+    title: 'Rubbish Bin Overflowing',
     description:
-      'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
+      'The rubbish bin is full and overflowing. Please clear it soon. Thank you for your help',
     category: CATEGORIES[0],
     options: ARTICLE_OPTIONS,
     image:
-      'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?fit=crop&w=450&q=80',
+      'https://cdn.shopify.com/s/files/1/1885/2639/articles/overflowing-green-wheelie-bins_1112x.jpg?v=1609936974',
     user: USERS[2],
     timestamp: dayjs().unix(),
   },
-  {
-    id: 4,
-    title: 'Office space means growth.',
-    description:
-      'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
-    category: CATEGORIES[0],
-    options: ARTICLE_OPTIONS,
-    image:
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
-    user: USERS[3],
-    timestamp: dayjs().unix(),
-  },
+  // {
+  //   id: 4,
+  //   title: 'Office space means growth.',
+  //   description:
+  //     'Rather than worrying about switching offices every couple years, you can instead stay in the same location.',
+  //   category: CATEGORIES[0],
+  //   options: ARTICLE_OPTIONS,
+  //   image:
+  //     'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
+  //   user: USERS[3],
+  //   timestamp: dayjs().unix(),
+  // },
   {
     id: 8,
     title: 'Office space means growth.',

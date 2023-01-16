@@ -7,6 +7,9 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import Menu from './Menu';
 import {useData, ThemeProvider, TranslationProvider} from '../hooks';
 
+import { LogBox } from 'react-native';
+LogBox.ignoreAllLogs(); //Ignore all log notifications
+
 export default () => {
   const {isDark, theme, setTheme} = useData();
 

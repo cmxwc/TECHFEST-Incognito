@@ -101,10 +101,25 @@ const Home = ({ navigation }) => {
 }
 
   // console.log(markers)
+  const [mapRegion, setmapRegion] = useState<any>(null);
+
+  useEffect(() => {
+    if (location) {
+      setmapRegion({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      });
+
+    }
+
+
+  }, [location]);
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map}>
+      <MapView style={styles.map} region={mapRegion}>
       {markers.map((marker : any) => (
 
         <MapView.Marker
@@ -114,9 +129,20 @@ const Home = ({ navigation }) => {
           title={marker.address}
           description={marker.car_park_type}
           onCalloutPress={() => {
-            navigation.navigate('Articles')}}
+            navigation.navigate('Articles', {
+              carparkName: marker.address
+            })}}
         />
       ))}
+      {location ? (
+      <MapView.Marker
+      pinColor={"red"}
+      key={1}
+      coordinate={{ latitude : location.coords.latitude, longitude : location.coords.longitude }}
+      title={"Current location"}
+    />
+      ) : null }
+
       </MapView>
       <Modal
         animationType="slide"
@@ -127,15 +153,17 @@ const Home = ({ navigation }) => {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}> 
-            
+            <Text style={styles.modalTitleText}>Nearest Carpark Found</Text>
             <Text style={styles.modalText}>{carparkSelected && carparkSelected.address ? carparkSelected.address : ''}</Text>
             <Text style={styles.modalText}>{carparkSelected && carparkSelected.car_park_type ? carparkSelected.car_park_type : ''}</Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => {
-                navigation.navigate('Articles')
+                navigation.navigate('Articles', {
+                  carparkName: carparkSelected && carparkSelected.address ? carparkSelected.address : ''
+                })
                 setModalVisible(!modalVisible)}}>
-              <Text style={styles.textStyle}>View carpark details</Text>
+              <Text style={styles.textStyle}>View Carpark Details</Text>
             </Pressable>
             <Pressable
               style={[styles.button, styles.buttonClose]}
@@ -290,6 +318,12 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
+  },
+  modalTitleText: {
+    marginBottom: 15,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
 export default Home;

@@ -49,8 +49,8 @@
     }
   },
   "app": {
-    "name": "Soft UI",
-    "fullname": "Soft UI Kit",
+    "name": "LotCare",
+    "fullname": "Carpark By All, For All",
     "native": "React Native",
     "link": "creative-tim.com"
   },
@@ -61,19 +61,21 @@
     "articles": "Articles",
     "rental": "Rental",
     "profile": "Profile",
+    "leaderboardrank": "Leaderboard",
     "settings": "Settings",
     "register": "Create account",
     "extra": "Extra - Automotive"
   },
   "navigation": {
-    "home": "Soft UI",
+    "home": "Carpark Map",
     "components": "Components",
-    "articles": "Soft UI",
+    "articles": "Carpark Issues",
     "rentals": "Soft UI",
     "rental": "Best Deal",
     "booking": "Booking",
     "chat": "Chat",
     "profile": "Profile",
+    "leaderboardrank": "Leaderboard",
     "settings": "Settings",
     "notifications": "Notifications",
     "agreement": "User Agreement",
@@ -89,7 +91,7 @@
     "documentation": "Documentation"
   },
   "home": {
-    "title": "Soft UI",
+    "title": "LotCare",
     "following": "Following",
     "trending": "Trending"
   },
