@@ -9,6 +9,7 @@ export {default as Notifications} from './Pro';
 export {default as NotificationsSettings} from './Pro';
 export {default as Privacy} from './Pro';
 export {default as Profile} from './Profile';
+export {default as LeaderboardRank} from './LeaderboardRank';
 export {default as Register} from './Register';
 export {default as Login} from './Pro';
 export {default as Rental} from './Pro';

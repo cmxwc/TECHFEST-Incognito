@@ -35,6 +35,7 @@
     "react-native": "0.68.2",
     "react-native-gesture-handler": "2.2.1",
     "react-native-keyboard-aware-scroll-view": "0.9.4",
+    "react-native-leaderboard": "^1.0.6",
     "react-native-maps": "0.30.1",
     "react-native-pager-view": "5.4.15",
     "react-native-reanimated": "2.8.0",
