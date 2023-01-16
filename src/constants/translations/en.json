@@ -49,8 +49,8 @@
     }
   },
   "app": {
-    "name": "Soft UI",
-    "fullname": "Soft UI Kit",
+    "name": "Carpark By All, For All",
+    "fullname": "Carpark By All, For All",
     "native": "React Native",
     "link": "creative-tim.com"
   },
@@ -66,9 +66,9 @@
     "extra": "Extra - Automotive"
   },
   "navigation": {
-    "home": "Soft UI",
+    "home": "Carpark Map",
     "components": "Components",
-    "articles": "Soft UI",
+    "articles": "Carpark Issues",
     "rentals": "Soft UI",
     "rental": "Best Deal",
     "booking": "Booking",

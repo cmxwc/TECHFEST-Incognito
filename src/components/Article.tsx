@@ -25,11 +25,24 @@ const Article = ({
   // render card for Newest & Fashion
   if (category?.id !== 1) {
     return (
-      <TouchableWithoutFeedback onPress={onPress}>
         <Block card padding={sizes.sm} marginTop={sizes.sm}>
           <Image height={170} resizeMode="cover" source={{uri: image}} />
+            {/* article category */}
+            {title && (
+            <Text
+              h4
+              bold
+              black
+              size={14}
+              marginTop={sizes.s}
+              transform="uppercase"
+              marginLeft={sizes.xs}
+              >
+              {title}
+            </Text>
+          )}
           {/* article category */}
-          {category?.name && (
+          {/* {category?.name && (
             <Text
               h5
               bold
@@ -40,7 +53,7 @@ const Article = ({
               gradient={gradients.primary}>
               {category?.name}
             </Text>
-          )}
+          )} */}
 
           {/* article description */}
           {description && (
@@ -93,7 +106,6 @@ const Article = ({
             </Block>
           )}
         </Block>
-      </TouchableWithoutFeedback>
     );
   }
 

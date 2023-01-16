@@ -129,7 +129,9 @@ const Home = ({ navigation }) => {
           title={marker.address}
           description={marker.car_park_type}
           onCalloutPress={() => {
-            navigation.navigate('Articles')}}
+            navigation.navigate('Articles', {
+              carparkName: marker.address
+            })}}
         />
       ))}
       {location ? (
@@ -157,7 +159,9 @@ const Home = ({ navigation }) => {
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => {
-                navigation.navigate('Articles')
+                navigation.navigate('Articles', {
+                  carparkName: carparkSelected && carparkSelected.address ? carparkSelected.address : ''
+                })
                 setModalVisible(!modalVisible)}}>
               <Text style={styles.textStyle}>View carpark details</Text>
             </Pressable>
