@@ -26,8 +26,8 @@ const Articles = ({ route, navigation }) => {
     {time: '3 Jan 2023', title: 'Issue acknowledged', description: 'Description'},
     {time: '3 Jan 2023', title: 'Further details requested', description: 'Action required by you'},
     {time: '4 Jan 2023', title: 'Further details sent', description: ''},
-    {time: '7 Jan 2023', title: 'Maintainence in progress...', description: ''},
-    {time: '9 Jan 2023', title: 'Maintainence completed!', description: '', icon:assets.check, circleColor:'#00ff00', circleSize:30}
+    {time: '7 Jan 2023', title: 'Maintenance in progress...', description: ''},
+    {time: '9 Jan 2023', title: 'Maintenance completed!', description: '', icon:assets.check, circleColor:'#00ff00', circleSize:30}
   ]
 
   const openModal = (item:any) => {
