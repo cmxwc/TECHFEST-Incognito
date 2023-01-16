@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, View, Modal, Pressable, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
+import {FlatList, StyleSheet, View, Pressable, TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 
 import {useData, useTheme} from '../hooks/';
 import {IArticle, ICategory} from '../constants/types';
-import {Block, Button, Article, Text, Input} from '../components/';
+import {Block, Button, Article, Text, Input, Image, Modal} from '../components/';
 
 import Timeline from 'react-native-timeline-flatlist';
 import { Assets } from '@react-navigation/stack';
@@ -55,6 +55,9 @@ const Articles = ({ route, navigation }) => {
     setArticles(newArticles);
     console.log(selected)
   }, [data, selected, setArticles]);
+
+  const [showModal, setModal] = useState(false);
+  const [quantity, setQuantity] = useState('Paint Work');
 
   return (
     <Block>
@@ -130,6 +133,26 @@ const Articles = ({ route, navigation }) => {
                   </Text>
                   <Block>
                     <Input placeholder="Description" marginBottom={sizes.m} />
+                    <Button
+                    flex={0}
+                    marginBottom={sizes.base}
+                    gradient={gradients.dark}
+                    onPress={() => setModal(true)}>
+                    <Block
+                      row
+                      align="center"
+                      justify="space-between"
+                      paddingHorizontal={sizes.sm}>
+                      <Text white bold transform="uppercase" marginRight={sizes.sm}>
+                        {quantity}
+                      </Text>
+                      <Image
+                        source={assets.arrow}
+                        color={colors.white}
+                        transform={[{rotate: '90deg'}]}
+                      />
+                    </Block>
+                  </Button>
                     <Button flex={0} gradient={gradients.secondary} marginBottom={sizes.base}>
                     <Text white bold transform="uppercase">
                       Upload Image
@@ -140,8 +163,25 @@ const Articles = ({ route, navigation }) => {
                       Submit
                     </Text>
                   </Button>
+                    <Modal visible={showModal} onRequestClose={() => setModal(false)}>
+                      <FlatList
+                        keyExtractor={(index) => `${index}`}
+                        data={['Paint Work', 'Rubbish', 'Electronics', 'Machinery', 'Others']}
+                        renderItem={({item}) => (
+                          <Button
+                            marginBottom={sizes.sm}
+                            onPress={() => {
+                              setQuantity(item);
+                              setModal(false);
+                            }}>
+                            <Text p white semibold transform="uppercase">
+                              {item}
+                            </Text>
+                          </Button>
+                        )}
+                      />
+                    </Modal>
                   </Block>
-
                 </Block>
 
 
